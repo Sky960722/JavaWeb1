@@ -2,6 +2,7 @@ package com.atguigu.qqzone.dao;
 
 import com.atguigu.qqzone.pojo.Reply;
 import com.atguigu.qqzone.pojo.Topic;
+import com.atguigu.qqzone.service.ReplyService;
 
 import java.util.List;
 
@@ -12,5 +13,7 @@ public interface ReplyDAO {
     void addReply(Reply reply);
     //删除回复
     void delReply(Integer id);
+    //根据id获取指定的Reply
+    Reply getReply(Integer id);
 
 }
