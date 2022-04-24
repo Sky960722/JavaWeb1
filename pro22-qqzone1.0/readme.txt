@@ -36,7 +36,7 @@
  1) URL没修改，用的还是fruitdb
  2）
  3）rsmd.getColumnName() 和 rsmd.getColumnLabel()
- 4）Can not set com.atguigu.qqzone.pojo.UserBasic field com.atguigu.qqzone.pojo.Topic.author to java.lang.Integer
+ 4）Can not set com.atguigu.qqzone.com.atguigu.book.pojo.UserBasic field com.atguigu.qqzone.com.atguigu.book.pojo.Topic.author to java.lang.Integer
  5) left.html页面没有样式，同时数据也不展示，原因是：我们是直接去请求的静态页面资源，那么并没有执行super.processTemplate()，也就是thymeleaf没有起作用
     (之前的表单也是这个原因)
     解决方法：

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script language="JavaScript" src="script/vue.js"></script>
+        <script language="JavaScript">
+
+            function hello() {
+                person.sayHello();
+            }
+            // var person = new Object();
+            // person.pid = "p001";
+            // person.pname ="jim";
+            // person.sayHello = function (){
+            //     alert("HELLO world");
+            // }
+            var person = {
+                "pid":"p001",
+                "pname":"jim",
+                "sayHello":function (){
+                    alert("Hello world");
+                }
+            }
+
+
+             */
+            window.onload = function () {
+                var vue = new Vue({})
+            }
+        </script>
+    </head>
+    <body>
+        <div id="div0">
+            <span>HELLO</span>
+            <input type="button" value="打招呼" onclick="hello()">
+        </div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>04.JS中的字符串和Object之间互转</title>
+        <script language="JavaScript">
+            function hello01(){
+                //1. js String -> js object
+                var str = "{\"uname\":\"lina\",\"age\":20}";
+                var user = JSON.parse(str);
+                alert(typeof user);
+                alert(user.uname + "_" +user.age);
+            }
+        </script>
+
+    </head>
+    <body>
+        <div>
+            <input type="button" value="确定" onclick="hello01()">
+        </div>
+    </body>
+</html>

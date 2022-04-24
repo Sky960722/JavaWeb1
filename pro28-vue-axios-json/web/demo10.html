@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script language="JavaScript" src="script/vue.js"></script>
+        <script language="JavaScript" src="script/axios.min.js"></script>
+        <script language="JavaScript">
+
+            window.onload = function () {
+                var vue = new Vue({
+                    "el": "#div0",
+                    data: {
+                        uname:"lina",
+                        pwd:"ok"
+                    },
+                    methods:{
+                        axios02:function (){
+                            axios({
+                                method : "POST",
+                                url:"axios02.do",
+                                data:{
+                                    uname: vue.uname,
+                                    pwd:vue.pwd
+                                }
+                            })
+                                .then(function (value){
+                                    var data = value.data;
+                                    //data对应的数据
+                                    //{uname:"鸠摩智",pwd:"ok"}
+                                    console.log(data)
+                                    vue.uname = data.uname;
+                                    vue.pwd = data.pwd;
+
+                                    //js语言中 也有字符串和js对象之间互转的API
+                                    //string JSON.stringify(object) object -> string
+                                    //object JSON.parse(string)    string -> object
+
+
+                                })
+                                .catch(function (reason){
+                                    console.log(reason)
+                                });
+                        }
+                    },
+                });
+            }
+        </script>
+
+    </head>
+    <body>
+
+        <div id="div0" >
+            uname:<input type="text" v-model="uname"/><br>
+            pwd:<input type="text" v-model="pwd"><br>
+            <input type="button" @click="axios02" value="发送JSON格式的参数值的异步请求">
+
+        </div>
+
+    </body>
+</html>
